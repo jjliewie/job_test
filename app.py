@@ -25,15 +25,15 @@ class Question:
         elif self.oneOption == 2:
             return self.no
 
-q1 = Question(1, "Do you like to read?", "Yes", "No", 1, 'a')
-q2 = Question(2, "Do you like to run?", "Yes", "No", 1, 'f')
-q3 = Question(3, "Do you consider yourself a considerate person?", "Yes", "No", 1, 'b')
-q4 = Question(4, "Do you like children", "Yes", "No", 1, 'd')
-q5 = Question(5, "Do you think you are a hard working person?", "Yes", "No", 1, 'j')
-q6 = Question(6, "Do you care about the environment?", "Yes", "No", 1, 'i')
-q7 = Question(7, "Do you consider yourself artistic", "Yes", "No", 1, 'e')
-q8 = Question(8, "Do you like taking photos?", "Yes", "No", 1, 'h')
-q9 = Question(9, "Do you like to study", "Yes", "No", 1, 'g')
+q1 = Question(1, "Do you like to read?", "yes", "no", 1, 'a')
+q2 = Question(2, "Do you like to run?", "yes", "no", 1, 'f')
+q3 = Question(3, "Do you consider yourself a considerate person?", "yes", "no", 1, 'b')
+q4 = Question(4, "Do you like children", "yes", "no", 1, 'd')
+q5 = Question(5, "Do you think you are a hard working person?", "yes", "no", 1, 'j')
+q6 = Question(6, "Do you care about the environment?", "yes", "no", 1, 'i')
+q7 = Question(7, "Do you consider yourself artistic", "yes", "no", 1, 'e')
+q8 = Question(8, "Do you like taking photos?", "yes", "no", 1, 'h')
+q9 = Question(9, "Do you like to study", "yes", "no", 1, 'g')
 
 questions_list = [q1, q2, q3, q4, q5, q6, q7, q8, q9]
 

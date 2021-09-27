@@ -25,12 +25,12 @@ def cosine_similarity(v1,v2):
     return sumxy/sqrt(sumxx*sumyy)
 
 def calculate(text):
-    print('******************')
+    # print('******************')
     k = []
     for i in text:
         k.append(int(i))
-    print(k)
-    print(set(k))
+    # print(k)
+    # print(set(k))
     if set(k) == {0}:
         return "there are no jobs that fit your lackluster personality"
 
@@ -46,40 +46,40 @@ def calculate(text):
     da = [[sheet.cell_value(c, r) for c in range(1, sheet.nrows)] for r in range(1, sheet.ncols)]
     la = [[bayes.cell_value(c, r) for c in range(1, bayes.nrows)] for r in range(1, bayes.ncols)]
 
-    print(da)
-    print(la)
+    # print(da)
+    # print(la)
 
     s = 0
     for t in la:
         s += t[0]
-    print(s)
+    # print(s)
 
     realistic = []
     for h in la:
         realistic.append(h[0]/s)
-    print('_______')
-    print(realistic)
-    print('_______')
+    # print('_______')
+    # print(realistic)
+    # print('_______')
 
     d = []
     for i in range(len(jobs)):
         d.append((jobs[i], da[i]))
-    print(d)
+    # print(d)
 
     compare = {}
     for i in d:
         compare[i[0]] = cosine_similarity(i[1], k)
         # compare[i[0]] = euclidean_distance(i[1], k)
-    print('___*___')
-    print(compare)
-    print('___*___')
+    # print('___*___')
+    # print(compare)
+    # print('___*___')
 
     maximum = [0, 0]
     for j, t in compare.items():
         if t > maximum[1]:
             maximum[1] = t
             maximum[0] = j
-        print(str(j)+ " : " + str(t))
+        # print(str(j)+ " : " + str(t))
 
     # print("the job that fits your personality best is: " + str(maximum[0]))
 
@@ -100,4 +100,4 @@ def calculate(text):
 
 # can i just say that writing this much code took me like 2 hours :(
 
-print(calculate('0010010010'))
+# print(calculate('0010010010'))

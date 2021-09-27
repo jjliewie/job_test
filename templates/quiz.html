@@ -6,24 +6,39 @@
     </head>
     <body>
         
-        <h1>QUIZ application</h1>
-        <b>please click yes if you agree</b>
+        <h2>PERSONALITY QUIZ</h2>
+             
+            <button class = "inner-switch" onclick="dark_mode()">dark mode</button>
 
         <form action ="/submitquiz", method="POST">
                 
             {% for question in questions_list %}
-        <h5>
-            {{question.question}} <br>
-
-            <input type="radio" name="{{question.q_id}}" value="{{question.yes}}" required> {{question.yes}}
-            <input type="radio" name="{{question.q_id}}" value="{{question.no}}" required> {{question.no}}
-
-        </h5>
-            {% endfor %}
+            <span>{{question.question}}</span> 
             
-            <br><br>
-            <input type="submit" name="submitform" value="Submit">
+            <br>
+
+            <label>
+            <input type="radio" name="{{question.q_id}}" value="{{question.yes}}" required> 
+            <span>{{question.yes}}</span>
+            </label>
+
+            <label>
+            <input type="radio" name="{{question.q_id}}" value="{{question.no}}" required> 
+            <span>{{question.no}}</span>
+            </label>
+            <br>
+            {% endfor %}
+
+                <input type="submit" class = "form-submit-button" name="submitform" value="submit">
+            <br>
         </form>
+
+        <script>
+            function dark_mode(){
+                var element = document.body;
+                element.classList.toggle("dark");
+            }
+        </script>
 
     </body>
 </html>
