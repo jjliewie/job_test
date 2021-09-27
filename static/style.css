@@ -9,8 +9,9 @@ body {
   color: #4d0716;
   font-weight: bold;
   font-size: calc(0.7em + 0.7vw);
-  background-color: #f5d4df;
+  background-color: #f5d4df88;
   margin-left: 5%;
+
 }
 
 form {
@@ -32,7 +33,7 @@ label input {
   left: -9999px;
 }
 label input:checked + span {
-  background-color: #f5d4df;
+  background-color: #f5d4df88;
 }
 label input:checked + span:before {
   box-shadow: inset 0 0 0 0.4375em #b43947;
@@ -45,7 +46,7 @@ label span {
   transition: 0.25s ease;
 }
 label span:hover {
-  background-color: #e9bbc7;
+  background-color: #e9bbc788;
 }
 label span:before {
   display: flex;
@@ -75,7 +76,7 @@ label span:before {
 
 .form-submit-button {
     font-family: "Monaco", Monospace;
-    background:#e9bdc2;
+    background:#e9bdc288;
     border-radius: 99em;
     width: 7em;
     height: 3em;
@@ -86,7 +87,8 @@ label span:before {
 }
 .form-submit-button:hover {
     font-family: "Monaco", Monospace;
-    background:#f17d8a;
+    background:#f17d8a88;
+    
     width: 7em;
     height: 3em;
     color: #4d0716;
@@ -105,7 +107,7 @@ label span:before {
     border :#fff;
     width: 7em;
     height: 3em;
-    background:#a2a1ff;
+    background:#a2a1ff88;
     text-align: center;
     font-size: calc(0.5em + 0.5vw);
     padding: 0.1875rem;
@@ -122,7 +124,7 @@ label span:before {
     border-radius: 99em;
     border :#fff;
     width: 7em;
-    background:#b7b6fd;
+    background:#b7b6fd88;
     height: 3em;
     text-align: center;
     font-size: calc(0.5em + 0.5vw);
