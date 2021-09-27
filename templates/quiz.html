@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz Application</title>
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        
+        <h1>QUIZ application</h1>
+        <b>please click yes if you agree</b>
+
+        <form action ="/submitquiz", method="POST">
+                
+            {% for question in questions_list %}
+        <h5>
+            {{question.question}} <br>
+
+            <input type="radio" name="{{question.q_id}}" value="{{question.yes}}" required> {{question.yes}}
+            <input type="radio" name="{{question.q_id}}" value="{{question.no}}" required> {{question.no}}
+
+        </h5>
+            {% endfor %}
+            
+            <br><br>
+            <input type="submit" name="submitform" value="Submit">
+        </form>
+
+    </body>
+</html>
