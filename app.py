@@ -36,14 +36,15 @@ q8 = Question(8, "Do you like taking photos?", "yes", "no", 1, 'h')
 q9 = Question(9, "Do you like to study", "yes", "no", 1, 'g')
 
 questions_list = [q1, q2, q3, q4, q5, q6, q7, q8, q9]
+r_value = ''
 
 @app.route("/quiz")
 def quiz():
     return render_template("quiz.html", questions_list = questions_list)
 
+# @app.route("/submitquiz", methods=['POST', 'GET'])
 @app.route("/submitquiz", methods=['POST', 'GET'])
 def submit():
-
     points = {}
     types = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
     for i in types:
@@ -59,7 +60,7 @@ def submit():
     use = ""
     for k, t in points.items():
         use += str(t)
-    return calculate(use)
+    return render_template("submitquiz.html", r_value = calculate(use))
 
     # value = request.form['option']
     # return (value)

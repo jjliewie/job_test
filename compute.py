@@ -96,7 +96,9 @@ def calculate(text):
     if realistic_maximum[0] == 0:
         return "there are no jobs that fit your lackluster personality"
 
-    return "the job that fits your personality best is: " + str(maximum[0]) + "\nthe job that fits your personality that you can most realistically attain is: " + str(realistic_maximum[0])
+    return "the job that fits your personality best is: " + str(maximum[0]) + " and the job that fits your personality that you can most realistically attain is: " + str(realistic_maximum[0])
+
+    # return "the job that fits your personality best is: " + str(maximum[0]) + "\nthe job that fits your personality that you can most realistically attain is: " + str(realistic_maximum[0])
 
 # can i just say that writing this much code took me like 2 hours :(
 

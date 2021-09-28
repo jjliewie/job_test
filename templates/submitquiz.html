@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz Result</title>
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        
+        <h2>QUIZ RESULT</h2>
+
+
+        <button class = "inner-switch" onclick="dark_mode()">dark mode</button>
+        <br>
+            
+        <span>{{r_value}}</span>
+
+        <script>
+            function dark_mode(){
+                var element = document.body;
+                element.classList.toggle("dark");
+            }
+        </script>
+
+    </body>
+</html>

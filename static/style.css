@@ -135,6 +135,8 @@ label span:before {
 .dark,
 .dark body {
     background-color: #222;
-    color: #e6e6e6;
     border-color: #e6e6e6;
+}
+.dark * {
+    color: #e6e6e6;
 }
