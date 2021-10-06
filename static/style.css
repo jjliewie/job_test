@@ -133,10 +133,11 @@ label span:before {
 }
 
 .dark,
-.dark body {
+.dark body{
     background-color: #222;
     border-color: #e6e6e6;
 }
+
 .dark * {
     color: #e6e6e6;
 }
@@ -155,6 +156,31 @@ label span:before {
 }
 
 .hyperlink_button:hover{
-    color:#000000;
-    background-color:#FFFFFF;
+    color:#FFFFFF;
+    background-color: #4d0716;
   }
+
+body {
+  margin: 25px 50px 75px;
+}
+
+::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5d4df88;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 99em;
+  border-left: 0;
+  border-right: 0;
+  background-color: rgb(153, 192, 228);
+}
+
+.dark::-webkit-scrollbar-track {
+  background-color: rgb(31, 31, 31);
+  border-radius: 100px;
+}
