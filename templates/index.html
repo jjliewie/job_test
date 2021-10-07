@@ -12,7 +12,33 @@
             <a href="{{ url_for('quiz') }}">Quiz</a>
         </div>
 
+        <br>
+
+        <button class = "inner-switch" onclick="dark_mode()">dark mode</button>
         <!-- <a class = "hyperlink_button" href="{{ url_for('quiz') }}">Quiz</a> -->
+
+        <p>
+
+            Hi! I'm Julie... and you are on my personality-job quiz website!! The entire code for this is open source that you can access on my github (yay!)
+            <br>
+            <br>
+
+            The quiz isn't meant to be super accurate... it's for fun! 
+            <br>I made it mostly the night before my SAT exam :)
+
+            <br>
+            <br>
+
+            Try it out!
+
+        </p>
+
+        <script>
+            function dark_mode(){
+                var element = document.body;
+                element.classList.toggle("dark");
+            }
+        </script>
 
     </body>
 </html>
