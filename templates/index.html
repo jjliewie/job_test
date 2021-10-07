@@ -7,9 +7,12 @@
     </head>
     <body>
 
-        <a class = "hyperlink_button" href="{{ url_for('quiz') }}">Quiz</a>
+        <div class="topnav">
+            <a class="active" href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('quiz') }}">Quiz</a>
+        </div>
 
-</div>
+        <!-- <a class = "hyperlink_button" href="{{ url_for('quiz') }}">Quiz</a> -->
 
     </body>
 </html>

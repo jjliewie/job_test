@@ -9,6 +9,11 @@
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+        <div class="topnav">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a class="active" href="{{ url_for('quiz') }}">Quiz</a>
+        </div>
+
         
         <h2>PERSONALITY QUIZ</h2>
              
@@ -58,9 +63,6 @@ AOS.init();
                 element.classList.toggle("dark");
             }
         </script>
-
-    
-
 
     </body>
 </html>

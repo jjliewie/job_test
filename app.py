@@ -38,6 +38,7 @@ q9 = Question(9, "Do you like to study", "yes", "no", 1, 'g')
 questions_list = [q1, q2, q3, q4, q5, q6, q7, q8, q9]
 r_value = ''
 
+@app.route('/index')
 @app.route('/')
 def index():
     return render_template("index.html")

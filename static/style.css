@@ -11,7 +11,7 @@ body {
   font-size: calc(0.7em + 0.7vw);
   background-color: #f5d4df88;
   margin-left: 5%;
-
+  margin: 25px 50px 75px;
 }
 
 form {
@@ -138,6 +138,26 @@ label span:before {
     border-color: #e6e6e6;
 }
 
+.dark .topnav{
+  background-color: rgb(183, 213, 238);
+  color: #222;
+}
+
+.dark .topnav a{
+  color: #222;
+}
+
+.dark .topnav a:hover {
+  background-color: rgb(188, 171, 236);
+  color: white;
+}
+
+.dark .topnav a.active {
+  background-color: #e679bc;
+  color: black;
+}
+
+
 .dark * {
     color: #e6e6e6;
 }
@@ -160,10 +180,6 @@ label span:before {
     background-color: #4d0716;
   }
 
-body {
-  margin: 25px 50px 75px;
-}
-
 ::-webkit-scrollbar {
   width: 0.8em;
 }
@@ -183,4 +199,29 @@ body {
 .dark::-webkit-scrollbar-track {
   background-color: rgb(31, 31, 31);
   border-radius: 100px;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(39, 39, 39);
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(188, 171, 236);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #e679bc;
+  color: white;
 }
