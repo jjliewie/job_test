@@ -56,12 +56,19 @@ def submit():
         points[i] = 0
 
     for question in questions_list:
+
         question_id = str(question.q_id)
         question_type = str(question.qtype)
-        selected = request.form[question_id]
-        count = question.pertains()
-        if selected == count:
-            points[question_type] = 1
+
+        try:
+            selected = request.form[question_id]
+            count = question.pertains()
+            if selected == count:
+                points[question_type] = 1
+                
+        except:
+            print("An exception occurred")
+
     use = ""
     for k, t in points.items():
         use += str(t)
