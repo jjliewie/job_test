@@ -7,7 +7,7 @@
     </head>
     <body>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
         <div class="topnav">
             <a href="{{ url_for('index') }}">Home</a>
@@ -17,51 +17,106 @@
         
         <h2>PERSONALITY QUIZ</h2>
              
-            <button class = "inner-switch" onclick="dark_mode()">dark mode</button>
+            <!-- <button class = "inner-switch" onclick="dark_mode()">dark mode</button> -->
 
         <form action ="/submitquiz", method="POST">
-                
 
-            {% for question in questions_list %}
+            <div id="questions">
 
-            <div data-aos="flip-down">
+                <div class="question active" id="0">
+                    
+                    <span>are you ready?</span>
 
-                <span>{{question.question}}</span> 
-            
-            <br>
+                    <br>
 
-            <label>
-            <input type="radio" name="{{question.q_id}}" value="{{question.yes}}" required> 
-            <span>{{question.yes}}</span>
-            </label>
+                    <label>
+                    <input type="radio" name="0" value="yes"> 
+                    <span>yes</span>
+                    </label>
 
-            <label>
-            <input type="radio" name="{{question.q_id}}" value="{{question.no}}" required> 
-            <span>{{question.no}}</span>
-            </label>
-            <br>
-                
+                    <br>
+
+                </div>
+
+                {% for question in questions_list %}
+
+                <div class="question" id="{{question.q_id}}">
+                    
+                    <span>{{question.question}}</span>
+
+                    <br>
+
+                    <label>
+                    <input type="radio" name="{{question.q_id}}" value="{{question.yes}}"> 
+                    <span>{{question.yes}}</span>
+                    </label>
+
+                    <label>
+                    <input type="radio" name="{{question.q_id}}" value="{{question.no}}"> 
+                    <span>{{question.no}}</span>
+                    </label>
+                    <br>
+
+                </div>
+
+                {% endfor %}
+
+                <div class="question" id ="10">
+                    <input type="submit" class = "form-submit-button" name="submitform" value="submit">
+                </div>
+
             </div>
 
-            {% endfor %}
-
-            <div data-aos="flip-down">
-
-                <input type="submit" class = "form-submit-button" name="submitform" value="submit">
-
-            </div>
+            <button type="button" id="next">Next</button>
+            <button type="button" id="previous">Previous</button>
                 
             <br>
         </form>
 
         <script>
 
-AOS.init();
+            $("#previous").hide();
 
-            function dark_mode(){
-                var element = document.body;
-                element.classList.toggle("dark");
-            }
+
+            $('#next').click(function(){
+
+                var $current = $('.question.active');
+                var id = $current.attr('id'); 
+
+                var radios = document.querySelectorAll('input[type="radio"]:checked');
+                if(radios.length > parseInt(id)){
+
+                    if(id != "10"){
+                        $('.question').removeClass('active');
+                        $current.next().addClass('active');
+                        $("#previous").show();
+
+                        if(id == "9"){
+                            $("#next").hide();
+                        }
+                    }
+                }
+
+            });
+            
+            $('#previous').click(function(){
+
+                var $current = $('.question.active');
+                var id = $current.attr('id'); 
+
+                if(id != "0"){
+
+                    $('.question').removeClass('active');
+                    $current.prev().addClass('active');
+                    $("#next").show();
+
+                    if(id == "0"){
+                        $("#previous").hide();
+                    }
+                }
+
+            });
+
         </script>
 
     </body>

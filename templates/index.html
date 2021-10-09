@@ -2,43 +2,39 @@
 <html>
     <head>
         <title>Home Page</title>
-        <link rel="stylesheet" href="static/style.css">
+        <link rel="stylesheet" href="static/new.css">
 
     </head>
     <body>
 
-        <div class="topnav">
-            <a class="active" href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('quiz') }}">Quiz</a>
+        <div class="container">
+
+            <div id="home" class="flex-column flex-center">
+
+                <h1>
+                    Personality to Job Quiz
+                </h1>
+
+                <a href="{{ url_for('quiz') }}" class="btn">start</a>
+
+            </div>
+
         </div>
 
-        <br>
+        <!-- <div class="topnav">
+            <a class="active" href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('quiz') }}">Quiz</a>
+        </div> -->
 
-        <button class = "inner-switch" onclick="dark_mode()">dark mode</button>
+        <!-- <button class = "inner-switch" onclick="dark_mode()">dark mode</button> -->
         <!-- <a class = "hyperlink_button" href="{{ url_for('quiz') }}">Quiz</a> -->
 
-        <p>
-
-            Hi! I'm Julie... and you are on my personality-job quiz website!! The entire code for this is open source that you can access on my github (yay!)
-            <br>
-            <br>
-
-            The quiz isn't meant to be super accurate... it's for fun! 
-            <br>I made it mostly the night before my SAT exam :)
-
-            <br>
-            <br>
-
-            Try it out!
-
-        </p>
-
-        <script>
+        <!-- <script>
             function dark_mode(){
                 var element = document.body;
                 element.classList.toggle("dark");
             }
-        </script>
+        </script> -->
 
     </body>
 </html>
