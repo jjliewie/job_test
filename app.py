@@ -47,7 +47,7 @@ def index():
 def quiz():
     return render_template("quiz.html", questions_list = questions_list)
 
-# @app.route("/submitquiz", methods=['POST', 'GET'])
+
 @app.route("/submitquiz", methods=['POST', 'GET'])
 def submit():
     points = {}
@@ -74,8 +74,6 @@ def submit():
         use += str(t)
     return render_template("submitquiz.html", r_value = calculate(use))
 
-    # value = request.form['option']
-    # return (value)
 
 if __name__ == "__main__":
     app.run(debug=True)

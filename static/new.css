@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap');
+
+:root {
+    background-color: rgb(29, 26, 26)
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Sen', sans-serif;
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: #fff;
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    color: #fff;
+
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    font-size: 3rem;
+    padding: 1.5rem 1.5rem;
+    width: 24rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: rgb(28, 26, 26);
+    background: linear-gradient(90deg, rgb(243, 146, 230) 0%, rgb(76, 0, 255) 100%);
+    border-radius: 4px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(223, 30, 248, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+  ::-webkit-scrollbar {
+    width: 0.8em;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f5d4df88;
+    border-radius: 100px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 99em;
+    border-left: 0;
+    border-right: 0;
+    background-color: rgb(153, 192, 228);
+  }
+

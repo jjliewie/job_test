@@ -225,3 +225,7 @@ label span:before {
   background-color: #e679bc;
   color: white;
 }
+
+.question:not(.active){
+  display:none;
+}

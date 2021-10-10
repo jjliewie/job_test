@@ -2,78 +2,91 @@
 <html>
     <head>
         <title>Personality Quiz</title>
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="static/style.css">
+        <link rel="stylesheet" href="static/quiz.css">
     </head>
     <body>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-        <div class="topnav">
+        <!-- <div class="topnav">
             <a href="{{ url_for('index') }}">Home</a>
             <a class="active" href="{{ url_for('quiz') }}">Quiz</a>
-        </div>
+        </div> -->
 
-        
-        <h2>PERSONALITY QUIZ</h2>
-             
+<div class="main-container">
+
+    
             <!-- <button class = "inner-switch" onclick="dark_mode()">dark mode</button> -->
+        
+            <div id="wrapper">
 
         <form action ="/submitquiz", method="POST">
+
+            <h2>PERSONALITY QUIZ</h2>
 
             <div id="questions">
 
                 <div class="question active" id="0">
-                    
-                    <span>are you ready?</span>
 
-                    <br>
+                    <div class="container">
 
-                    <label>
-                    <input type="radio" name="0" value="yes"> 
-                    <span>yes</span>
-                    </label>
+                        <span>are you ready?</span>
 
-                    <br>
+                </div>
+
+                <center>
+                    <input class = "radio-label" type="radio" name="0" value="yes" data-icon='yes'/>
+                </center>
+
+                <br>
 
                 </div>
 
                 {% for question in questions_list %}
 
                 <div class="question" id="{{question.q_id}}">
-                    
-                    <span>{{question.question}}</span>
 
-                    <br>
+                    <div class="container">
 
-                    <label>
-                    <input type="radio" name="{{question.q_id}}" value="{{question.yes}}"> 
-                    <span>{{question.yes}}</span>
-                    </label>
 
-                    <label>
-                    <input type="radio" name="{{question.q_id}}" value="{{question.no}}"> 
-                    <span>{{question.no}}</span>
-                    </label>
-                    <br>
+                        <span>{{question.question}}</span>
+
+                    </div>
+
+                    <div class="container">
+
+                        <input class = "radio-label" type="radio" name="{{question.q_id}}" value="{{question.yes}}" data-icon='{{question.yes}}'/>
+
+                        <input class = "radio-label" type="radio" name="{{question.q_id}}" value="{{question.no}}" data-icon='{{question.no}}'/>
+
+                    </div>
 
                 </div>
 
                 {% endfor %}
-
-                <div class="question" id ="10">
-                    <input type="submit" class = "form-submit-button" name="submitform" value="submit">
-                </div>
-
+                    <div class="question" id ="10">
+                        <input type="submit" class = "form-submit-button" name="submitform" value="submit">
+                    </div>
             </div>
 
-            <button type="button" id="next">Next</button>
-            <button type="button" id="previous">Previous</button>
-                
-            <br>
         </form>
 
+            <center>
+
+                <button type="button" id="previous">Previous</button>
+                <button type="button" id="next">Next</button>
+
+            </center> 
+
+    </div>
+
+    </div>
+
         <script>
+
+        setTimeout(function(){
+            $("#radio").attr('checked','checked');
+        },10);
 
             $("#previous").hide();
 
