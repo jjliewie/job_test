@@ -10,7 +10,8 @@ body {
 }
 
 html {
-    background-color: rgb(29, 26, 26)
+  background-image: url("background2.jpg");
+  background-size: 100% 100%;
 }
 
 body {
@@ -62,13 +63,14 @@ h2 {
 }
 
 span{
-    color:white;
+    color:rgb(0, 0, 0);
+    font-size: 20px;
 }
 
 /*  */
 
 input {
-    display: block;
+  display: block;
   padding: 1em 2em;
   margin: 0.5em;
   cursor: pointer;
@@ -85,7 +87,7 @@ input {
   }
 
   input:hover {
-    background: #d6d6d6;
+    background: #f0e8d1;
     color: #101010;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
   }
@@ -99,8 +101,13 @@ input {
   }
   
   input:checked:after{
-    color: crimson;
-    
+    color: rgb(28, 145, 255);
+    text-rendering: geometricPrecision;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-shadow: 0 0 0.34em #1da9cc;
+    filter: blur(0.007em);
+    animation: shake 2.5s linear forwards;
   }
 
 /*  */
@@ -111,8 +118,23 @@ input {
 
 #wrapper
 {
-  border: 1px solid #888;
-  display: inline-block;
-  padding:20px;
+  display: inline;
+  padding:50px;
+  background-color: rgba(162, 187, 255, 0.507);
   
+}
+
+.round {
+  border-radius: 10%;
+}
+
+.button {
+  background-color: #272727; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  padding: 5px 20px;
 }

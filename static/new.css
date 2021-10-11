@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap');
 
 :root {
-    background-color: rgb(29, 26, 26)
+    background-image: url("background.jpg");
+    background-size: 100% 100%;
 }
 
 * {

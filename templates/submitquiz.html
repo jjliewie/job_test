@@ -2,30 +2,40 @@
 <html>
     <head>
         <title>Quiz Result</title>
-        <link rel="stylesheet" href="static/style.css">
+        <link rel="stylesheet" href="static/submit.css">
     </head>
     <body>
 
-        <div class="topnav">
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('quiz') }}">Quiz</a>
+        <button class = "inner-switch"><a href="{{ url_for('index') }}">Home</a></button>
+
+        <div class="container">
+        
+        <div id="home" class="flex-column flex-center">
+
+            <div id="wrapper">
+
+                <h1>QUIZ RESULT</h1>
+
+                <h2>{{r_value}}</h2>
+
+            </div>
+
+        </div>
+
         </div>
 
         
-        <h2>QUIZ RESULT</h2>
 
 
-        <button class = "inner-switch" onclick="dark_mode()">dark mode</button>
-        <br>
-            
-        <span>{{r_value}}</span>
+        <!-- <button class = "inner-switch" onclick="dark_mode()">dark mode</button>
+        <br> -->
 
-        <script>
+        <!-- <script>
             function dark_mode(){
                 var element = document.body;
                 element.classList.toggle("dark");
             }
-        </script>
+        </script> -->
 
     </body>
 </html>
