@@ -74,6 +74,19 @@ def calculate(text):
     # print(compare)
     # print('___*___')
 
+    top = []
+
+    for j, t in compare.items():
+        top.append((t, j))
+
+    top.sort(reverse=True)
+    top = top[:5]
+
+    compare_top = {}
+
+    for x in top:
+        compare_top[x[1]] = x[0]
+
     maximum = [0, 0]
     for j, t in compare.items():
         if t > maximum[1]:
@@ -85,7 +98,7 @@ def calculate(text):
 
     realistic_maximum = [0,0]
     cnt = 0
-    for j, t in compare.items():
+    for j, t in compare_top.items():
         if (t * realistic[cnt]) > realistic_maximum[1]:
             realistic_maximum[1] = (t * realistic[cnt])
             realistic_maximum[0] = j
