@@ -1,3 +1,3 @@
 # trying
 
-really ugly & have finished yet
+really ugly & haven't finished yet
